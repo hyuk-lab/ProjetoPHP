@@ -17,15 +17,18 @@ class UserController extends Controller
         return redirect('/listar_usuario');
     }
 
+    public function formCriarUsuario(){
+        return view("cadastro_usuario");
+    }
+    
+
     public function listar() {
         $users = User::all();
 
         return view("users", ["users"=>$users]);
+        
     }
-public function formCriarUsuario(){
-    return view("cadastro_usuario");
 }
 
 
-}
 
